@@ -5,14 +5,26 @@ $(function() {
     // Put your code here to change the "markup" variable.
     // Don't change any other code in this file. You will be sad.
 
-     var markup = "<p><strong>Location:</strong> " + data.timezone + " </p> " + " <p><i>(All temperatures are in degrees Fahrenheit)</i></p> " +
-    "<p></p><p><h4>The current weather is  " + data.currently.summary + " and it is " + data.currently.apparentTemperature + " degrees</p></h4>" + data.currently.icon +
+  var markup =
+      "<h1>Weather Forecast for Chicago</h1>" +
+
+      "<h2>Current Conditions</h3>" +
+      "It is currently " + data.currently.summary + " and the temperature is " + data.currently.temperature + " F." +
+      "It feels like " + data.currently.apparentTemperature + " degrees and the windspeed is " + data.currently.windSpeed + " mph." +
+
+      "<h2>Three-Day Forecast</h2>" +
+      "<ul><li>Tomorrow, the high will be " + data.daily.data[1].temperatureMax + " degrees." +
+      "<li>The next day, the high will be " + data.daily.data[2].temperatureMax + " degrees." +
+      "<li>Three days from now, the high will be " + data.daily.data[3].temperatureMax + " degrees.</ul>" +
+
+      "<h2>Seven-Day Forecast</h2" +
+      "<ul><li>" + data.daily.summary
+
+     "<p></p><p><h4>The current weather is  " + data.currently.summary + " and it is " + data.currently.apparentTemperature + " degrees</p></h4>" + data.currently.icon +
      " </p><p>The 3-day forecast is: <ul><li><strong>Day 1:</strong> " + data.daily.data[1].summary + "There will be a high of " + data.daily.data[1].temperatureMax + " and a low of " + data.daily.data[1].temperatureMin +
      "<li><strong>Day 2:</strong> " + data.daily.data[2].summary + "There will be a high of " + data.daily.data[2].temperatureMax + " and a low of " + data.daily.data[2].temperatureMin +
      "<li><strong>Day 3:</strong> " + data.daily.data[3].summary + " There will be a high of " + data.daily.data[3].temperatureMax + " and a low of " + data.daily.data[3].temperatureMin +
      "</ul> </p>"
-
-"The weather report... " + "will be here when I finish my homework.";
 
 
     // End of your code
